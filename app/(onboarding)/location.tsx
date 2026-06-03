@@ -11,10 +11,14 @@ export default function LocationScreen() {
 
   return (
     <Screen>
-      <View style={{ flex: 1, padding: 20, justifyContent: 'center' }}>
-        <Typography variant="h1" style={{ marginBottom: 24 }}>Where are you located?</Typography>
+      <View style={{ flex: 1, padding: 24, justifyContent: 'center' }}>
+        <Typography variant="h1" style={{ marginBottom: 12 }}>Where are you located?</Typography>
+        <Typography variant="body" color="textMuted" style={{ marginBottom: 32 }}>
+          We use this to show you relevant products and sellers in your community.
+        </Typography>
         <Input label="Country" placeholder="e.g. UAE" />
         <Input label="City" placeholder="e.g. Dubai" />
+        <Input label="Postal Code (Optional)" placeholder="00000" />
         <Button title="Continue" onPress={() => router.push('/(onboarding)/intent')} style={{ marginTop: 24 }} />
       </View>
     </Screen>

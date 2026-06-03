@@ -1,24 +1,30 @@
 export const Colors = {
   light: {
-    background: '#FFFFFF',
-    text: '#1F2937',
-    primary: '#D97706', // Warm amber/orange
-    secondary: '#F3F4F6',
-    border: '#E5E7EB',
-    error: '#EF4444',
-    success: '#10B981',
+    background: '#FAFAF9', // Warm off-white
+    surface: '#FFFFFF', // Clean white for cards
+    text: '#1C1917', // Deep stone/charcoal for readability
+    textMuted: '#78716C', // Soft stone
+    primary: '#D97706', // Warm amber/saffron
+    primaryLight: '#FEF3C7', // Soft amber background
+    secondary: '#E7E5E4', // Subtle gray/stone for borders/dividers
+    border: '#E7E5E4',
+    error: '#DC2626',
+    success: '#059669', // Trust green
+    successLight: '#D1FAE5',
     card: '#FFFFFF',
-    textMuted: '#6B7280',
   },
   dark: {
-    background: '#111827',
-    text: '#F9FAFB',
+    background: '#1C1917', // Deep warm dark
+    surface: '#292524', // Slightly lighter warm dark for cards
+    text: '#FAFAF9',
+    textMuted: '#A8A29E',
     primary: '#F59E0B',
-    secondary: '#1F2937',
-    border: '#374151',
+    primaryLight: '#78350F', // Dark amber background
+    secondary: '#44403C',
+    border: '#44403C',
     error: '#F87171',
     success: '#34D399',
-    card: '#1F2937',
-    textMuted: '#9CA3AF',
+    successLight: '#064E3B',
+    card: '#292524',
   },
 };

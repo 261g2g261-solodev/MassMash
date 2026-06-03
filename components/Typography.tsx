@@ -18,6 +18,9 @@ export const Typography = ({ variant = 'body', color = 'text', style, ...props }
   const { i18n } = useTranslation();
   const isRTL = i18n.language === 'ar';
 
+  // Choose font family based on language if custom fonts are added later.
+  // For now, adjusting line heights and letter spacing to feel premium.
+
   const getVariantStyles = () => {
     switch (variant) {
       case 'h1':
@@ -52,7 +55,11 @@ export const Typography = ({ variant = 'body', color = 'text', style, ...props }
     <Text
       style={[
         getVariantStyles(),
-        { color: getTextColor(), textAlign: isRTL ? 'right' : 'left' },
+        {
+          color: getTextColor(),
+          textAlign: isRTL ? 'right' : 'left',
+          writingDirection: isRTL ? 'rtl' : 'ltr'
+        },
         style,
       ]}
       {...props}
@@ -62,26 +69,30 @@ export const Typography = ({ variant = 'body', color = 'text', style, ...props }
 
 const styles = StyleSheet.create({
   h1: {
-    fontSize: 32,
-    fontWeight: '700',
-    marginBottom: 16,
+    fontSize: 34,
+    fontWeight: '800',
+    letterSpacing: -0.5,
+    lineHeight: 42,
   },
   h2: {
     fontSize: 24,
-    fontWeight: '600',
-    marginBottom: 12,
+    fontWeight: '700',
+    letterSpacing: -0.3,
+    lineHeight: 32,
   },
   h3: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '600',
-    marginBottom: 8,
+    lineHeight: 26,
   },
   body: {
     fontSize: 16,
     lineHeight: 24,
+    fontWeight: '400',
   },
   caption: {
     fontSize: 14,
     lineHeight: 20,
+    fontWeight: '400',
   },
 });

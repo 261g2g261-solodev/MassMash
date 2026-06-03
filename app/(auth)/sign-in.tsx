@@ -13,12 +13,38 @@ export default function SignInScreen() {
 
   return (
     <Screen>
-      <View style={{ flex: 1, padding: 20, justifyContent: 'center' }}>
-        <Typography variant="h1" style={{ marginBottom: 32 }}>{t('auth.signIn')}</Typography>
+      <View style={{ flex: 1, padding: 24, justifyContent: 'center' }}>
+        <Typography variant="h1" style={{ marginBottom: 8 }}>{t('auth.signIn')}</Typography>
+        <Typography variant="body" color="textMuted" style={{ marginBottom: 32 }}>
+          Welcome back to the trusted community.
+        </Typography>
+
         <Input label={t('auth.email')} placeholder="user@example.com" keyboardType="email-address" autoCapitalize="none" />
         <Input label={t('auth.password')} placeholder="********" secureTextEntry />
-        <Button title={t('auth.signIn')} onPress={() => router.back()} style={{ marginTop: 24 }} />
-        <Button title={t('auth.signUp')} onPress={() => router.push('/(auth)/sign-up')} variant="outline" style={{ marginTop: 16 }} />
+
+        <View style={{ alignItems: 'flex-end', marginBottom: 24 }}>
+          <Typography
+            variant="caption"
+            color="primary"
+            onPress={() => router.push('/(auth)/forgot-password')}
+          >
+            {t('auth.forgotPassword')}
+          </Typography>
+        </View>
+
+        <Button title={t('auth.signIn')} onPress={() => router.back()} />
+
+        <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 32 }}>
+          <Typography variant="body" color="textMuted">Don't have an account? </Typography>
+          <Typography
+            variant="body"
+            color="primary"
+            style={{ fontWeight: '600' }}
+            onPress={() => router.push('/(auth)/sign-up')}
+          >
+            {t('auth.signUp')}
+          </Typography>
+        </View>
       </View>
     </Screen>
   );
