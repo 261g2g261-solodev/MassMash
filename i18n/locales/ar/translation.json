@@ -1,0 +1,38 @@
+{
+  "auth": {
+    "signIn": "تسجيل الدخول",
+    "signUp": "إنشاء حساب",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "forgotPassword": "هل نسيت كلمة المرور؟"
+  },
+  "tabs": {
+    "home": "الرئيسية",
+    "search": "بحث",
+    "sell": "بيع",
+    "inbox": "الرسائل",
+    "profile": "حسابي"
+  },
+  "onboarding": {
+    "welcome": "أهلاً بك",
+    "chooseLanguage": "اختر اللغة",
+    "continue": "متابعة",
+    "system": "النظام"
+  },
+  "settings": {
+    "theme": "المظهر",
+    "light": "فاتح",
+    "dark": "داكن",
+    "system": "النظام",
+    "language": "اللغة",
+    "logout": "تسجيل الخروج"
+  },
+  "sell": {
+    "becomeSeller": "كن بائعاً",
+    "legalName": "الاسم القانوني",
+    "phone": "رقم الهاتف",
+    "city": "المدينة",
+    "postalCode": "الرمز البريدي",
+    "submit": "تقديم الطلب"
+  }
+}
